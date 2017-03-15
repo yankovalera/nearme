@@ -1,0 +1,11 @@
+<Alloy>
+	<Window class="container" title="Password Recovery" backButtonTitle="Back">
+		<ScrollView class="verticalScroll">
+			<ImageView image="/images/logo.png" class="logo" />
+
+			<TextField class="formInput email" hintText="Email" id="email" />
+
+			<Button class="submit" title="Recover Password" onClick="doRecover" />
+		</ScrollView>
+	</Window>
+</Alloy>

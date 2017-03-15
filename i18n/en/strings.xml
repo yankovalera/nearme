@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="forgot_label">Recover password</string>
+	<string name="connection_error">Connection error</string>
+</resources>

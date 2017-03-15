@@ -9,3 +9,5 @@ tmp
 .settings
 Thumbs.db
 config.json
+platform/android/alloy_generated
+platform/ios/alloy_generated

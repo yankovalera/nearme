@@ -10,17 +10,65 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 For example, the following would apply to all labels, windows,
 and text fields (depending on platform) in your app unless you
 overrode the settings with other TSS, XML, or JS settings:
+*/
 
-'Label[platform=android,windows]': {
-	color: '#000' // all platforms except Android and Windows default to black
+"Window": {
+	backgroundColor: '#fff' // white background instead of default transparent or black
 }
 
-'Window': {
-	backgroundColor: '#fff' // white background instead of default transparent or black
+"Label": {
+	color: '#444' // all platforms except Android and Windows default to black
+}
+
+'Button': {
+	height: 40,
+    backgroundColor: "#444",
+    color: "white",
+    borderRadius: 5
+}
+
+'TextField[platform=ios]': {
+	height: 40,
+    paddingLeft: 10
 }
 
 'TextField[platform=android]': {
 	height: Ti.UI.SIZE
 }
 
-*/
+".formInput": {
+    width: "90%",
+    top: 20,
+    borderRadius: 5,
+    borderColor: "#dadada"
+}
+
+".logo": {
+    width: Ti.UI.SIZE,
+    height: 150,
+    top: 30
+}
+
+".row": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.SIZE,
+    top: 20,
+}
+
+".verticalScroll": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    contentWidth: Ti.UI.FILL,
+    contentHeight: Ti.UI.SIZE,
+    scrollType: "vertical",
+    layout: "vertical"
+}
+
+".email": {
+    keyboardType: Ti.UI.KEYBOARD_TYPE_EMAIL,
+    autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE
+}
+
+".password": {
+    passwordMask: true
+}

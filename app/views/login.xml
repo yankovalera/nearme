@@ -1,0 +1,19 @@
+<Alloy>
+	<NavigationWindow module="xp.ui" id="navWindow">
+		<Window class="container" title="Login to Nearme">
+			<ScrollView class="verticalScroll">
+				<ImageView image="/images/logo.png" class="logo" />
+
+				<TextField class="formInput email" hintText="Email" id="email" />
+
+				<TextField class="formInput password" hintText="Password" id="password" />
+
+				<View class="row">
+					<Button class="submit" title="Login" onClick="doLogin" />
+
+					<Label class="forgotLabel" text="L('forgot_label')" onClick="doForgot"/>
+				</View>
+			</ScrollView>
+		</Window>
+	</NavigationWindow>
+</Alloy>

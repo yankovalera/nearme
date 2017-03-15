@@ -1,0 +1,9 @@
+".submit" : {
+    width: "45%",
+    left: "5%"
+}
+
+".forgotLabel": {
+    width: Ti.UI.SIZE,
+    right: "5%"
+}
