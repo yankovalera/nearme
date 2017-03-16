@@ -4,12 +4,12 @@
 }
 
 "ListItem": {
-    height: 80
+    height: 90
 }
 
 ".thumbnail": {
-    width: 80,
-    height: 60,
+    width: 90,
+    height: 70,
     left: 10,
     top: 10,
     borderRadius: 5
@@ -17,13 +17,28 @@
 
 ".title": {
     width: Ti.UI.FILL,
-    height: Ti.UI.SIZE,
-    left: 100,
-    right: 10,
+    height: 20,
+    left: 110,
+    right: 60,
     top: 10
 }
 
 "#servicesList": {
     width: Ti.UI.FILL,
     height: Ti.UI.FILL
+}
+
+".distance": {
+    width: Ti.UI.SIZE,
+    height: 20,
+    top: 10,
+    right: 10
+}
+
+".description": {
+    width: Ti.UI.FILL,
+    height: 40,
+    top: 40,
+    left: 110,
+    right: 10
 }

@@ -72,3 +72,15 @@ overrode the settings with other TSS, XML, or JS settings:
 ".password": {
     passwordMask: true
 }
+
+".font12": {
+	font: {
+		fontSize: 12
+	}
+}
+
+".font10": {
+	font: {
+		fontSize: 10
+	}
+}

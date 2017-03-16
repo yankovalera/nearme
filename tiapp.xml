@@ -37,6 +37,12 @@
 				<false/>
 				<key>UIStatusBarStyle</key>
 				<string>UIStatusBarStyleDefault</string>
+				<key>NSLocationWhenInUseUsageDescription</key>
+                <string>App will use your current position to search services in your zone.</string>
+                <key>NSLocationAlwaysUsageDescription</key>
+                <string>App will use your current position to search services in your zone.</string>
+                <key>NSLocationUsageDescription</key>
+                <string>App will use your current position to search services in your zone.</string>
 			</dict>
 		</plist>
 	</ios>

@@ -1,6 +1,6 @@
 <Alloy>
 	<NavigationWindow module="xp.ui" id="navWindow">
-		<Window class="container" title="Nearme">
+		<Window class="container" title="Nearme" onOpen="doOpen">
 			<ListView id="servicesList" defaultItemTemplate="defaultTemplate" onItemclick="doItemClick">
 				<SearchBar platform="ios"/>
 
@@ -11,11 +11,22 @@
 						<ImageView class="thumbnail" bindId="thumbnail"/>
 
 						<Label class="title" bindId="title" />
+
+						<Label class="distance font10" bindId="distance" />
+
+						<Label class="description font12" bindId="about" />
 					</ItemTemplate>
 				</Templates>
 
 				<ListSection id="section" dataCollection="services" dataTransform="transformService" dataFunction="updateList">
-					<ListItem thumbnail:image="{ thumbnail }" title:text="{ title }" searchableText="{ search }" itemId="{ objectId }"></ListItem>
+					<ListItem
+						thumbnail:image="{ thumbnail }"
+						title:text="{ title }"
+						about:text="{ about }"
+						distance:text="{ distance }"
+						searchableText="{ search }"
+						itemId="{ objectId }">
+					</ListItem>
 				</ListSection>
 			</ListView>
 		</Window>

@@ -30,7 +30,7 @@ function doLogin(e) {
                 Alloy.Globals.goHome(e);
 
                 if (OS_IOS) {
-                    $.login.close();
+                    $.navWindow.close();
                 }
             } else if (e && e.error) {
                 alert(e.error);
