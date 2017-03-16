@@ -1,4 +1,23 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<NavigationWindow module="xp.ui" id="navWindow">
+		<Window class="container" title="Nearme">
+			<ListView id="servicesList" defaultItemTemplate="defaultTemplate" onItemclick="doItemClick">
+				<SearchBar platform="ios"/>
+
+				<SearchView ns="Ti.UI.Android" platform="android"/>
+
+				<Templates>
+					<ItemTemplate name="defaultTemplate">
+						<ImageView class="thumbnail" bindId="thumbnail"/>
+
+						<Label class="title" bindId="title" />
+					</ItemTemplate>
+				</Templates>
+
+				<ListSection id="section" dataCollection="services" dataTransform="transformService" dataFunction="updateList">
+					<ListItem thumbnail:image="{ thumbnail }" title:text="{ title }" searchableText="{ search }" itemId="{ objectId }"></ListItem>
+				</ListSection>
+			</ListView>
+		</Window>
+	</NavigationWindow>
 </Alloy>

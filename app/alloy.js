@@ -27,7 +27,20 @@ Alloy.Globals.parse.config({
             return Alloy.Globals.user ? Alloy.Globals.user.sessionToken : '';
         }
     },
-    models: [],
+    models: [{
+        name: "service",
+        id: "objectId",
+        collections: [{
+            name: "services",
+            content: "result",
+            read: "getServices"
+        }]
+    }, {
+        name: "image",
+        collections: [{
+            name: "images"
+        }]
+    }],
     methods: [{
         name: "login",
         get: 'login?username=<email>&password=<password>'
@@ -37,6 +50,9 @@ Alloy.Globals.parse.config({
     }, {
         name: "validToken",
         get: "users/me"
+    }, {
+        name: "getServices",
+        post: "functions/nearme"
     }],
     onLoad: function(e, callback) {
         if (callback) {

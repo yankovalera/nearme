@@ -1,6 +1,6 @@
 <Alloy>
 	<NavigationWindow module="xp.ui" id="navWindow">
-		<Window class="container" title="Login to Nearme">
+		<Window class="container" title="Login">
 			<ScrollView class="verticalScroll">
 				<ImageView image="/images/logo.png" class="logo" />
 

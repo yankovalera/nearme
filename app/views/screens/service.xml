@@ -1,0 +1,25 @@
+<Alloy>
+	<Window class="container" title="{ title }">
+		<ScrollView class="verticalScroll">
+			<ScrollableView id="imagesScroll" dataCollection="images">
+				<ImageView image="{ url }" class="itemImage"/>
+			</ScrollableView>
+
+			<View class="row" onClick="doOpenWeb">
+				<ImageView image="/images/link.png" class="icon" left="20"/>
+
+				<Label text="{ website }" class="info" left="50"/>
+			</View>
+
+			<View class="row" onClick="doCall">
+				<ImageView image="/images/call.png" class="icon" left="20"/>
+
+				<Label text="{ phone }" class="info"/>
+			</View>
+
+			<View class="separator"/>
+
+			<Label text="{ about }" class="description"/>
+		</ScrollView>
+	</Window>
+</Alloy>

@@ -1,4 +1,29 @@
 
 ".container" : {
-  
+
+}
+
+"ListItem": {
+    height: 80
+}
+
+".thumbnail": {
+    width: 80,
+    height: 60,
+    left: 10,
+    top: 10,
+    borderRadius: 5
+}
+
+".title": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.SIZE,
+    left: 100,
+    right: 10,
+    top: 10
+}
+
+"#servicesList": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
 }
