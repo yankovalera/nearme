@@ -57,6 +57,10 @@ overrode the settings with other TSS, XML, or JS settings:
     selectedColor: "#FFF"
 }
 
+"ListItem[platform=ios]" : {
+    selectionStyle: Ti.UI.iOS.ListViewCellSelectionStyle.NONE
+}
+
 ".separator": {
     width: Ti.UI.FILL,
     height: 1,

@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container" title="{ title }">
+	<Window class="container" title="{ title }" onClose="$.cleanup">
 		<TabbedBar id="tabbedBar" onClick="doTabClick" index="0" module="TabbedBar">
 			<!-- The Labels tag sets the TabbedBar.labels property. -->
 			<Labels>
@@ -39,12 +39,15 @@
 				<Templates>
 					<ItemTemplate name="defaultTemplate">
 						<Label class="reviewLabel font12" bindId="review" />
+
+						<Label class="owner font12" bindId="owner" />
 					</ItemTemplate>
 				</Templates>
 
-				<ListSection id="section" dataCollection="reviews">
+				<ListSection id="section" dataCollection="reviews" dataTransform="transformReview">
 					<ListItem
 						review:text="{ review }"
+						owner:text="{ owner }"
 						itemId="{ objectId }">
 					</ListItem>
 				</ListSection>

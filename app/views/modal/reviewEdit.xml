@@ -1,17 +1,21 @@
 <Alloy>
 	<Window class="modalWindow" onClose="$.cleanup">
-        <View class="modalContent vertical">
+        <View class="modalContent vertical" id="modalContent">
         	<TextArea id="review" value="{ review }" module="xp.ui" hintText="Add your review"/>
 
             <View class="separator" />
 
-            <View class="row">
+            <View class="row" id="editRow">
                 <Button title="CANCEL" class="modalAction" left="0" onClick="doCancel" />
 
                 <View class="horizontalSeparator" />
 
-                <Button title="OK" class="modalAction" right="0" onClick="doAccept" />
+                <Button title="SAVE" class="modalAction" right="0" onClick="doAccept" />
             </View>
+
+			<View class="row" id="viewRow">
+				<Button title="CLOSE" class="modalAction" width="Ti.UI.FILL" onClick="doCancel" />
+			</View>
         </View>
     </Window>
 </Alloy>

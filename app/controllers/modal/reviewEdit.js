@@ -3,12 +3,20 @@ var args = $.args;
 
 var editing = $model.id ? true : false;
 
+var owner = $model.get("user").objectId == Alloy.Globals.user.objectId;
+
+if (owner) {
+    $.modalContent.remove($.viewRow);
+} else {
+    $.modalContent.remove($.editRow);
+}
+
 function doAccept(e) {
     var review = $.review.getValue();
 
     if (!review) {
         alert(L('review_error'));
-    } else {
+    } else if (owner) {
         Alloy.Globals.loading.show('Saving...', false);
 
         $model.save({
@@ -18,7 +26,9 @@ function doAccept(e) {
             success: function () {
                 Alloy.Globals.loading.hide();
 
-                Alloy.Collections.reviews.add($model);
+                if (!editing) {
+                    Alloy.Collections.reviews.add($model);
+                }
 
                 $.reviewEdit.close();
             },

@@ -67,5 +67,12 @@
 }
 
 "ListItem": {
-    height: 80
+    height: 110
+}
+
+".owner": {
+    width: Ti.UI.SIZE,
+    height: 20,
+    top: 80,
+    right: 10
 }

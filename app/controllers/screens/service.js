@@ -27,8 +27,18 @@ function doCall(e) {
     }
 }
 
+function transformReview(model) {
+    var modelJSON = model.toJSON();
+
+    console.log(modelJSON);
+
+    modelJSON.owner = (modelJSON.user && modelJSON.user.firstname) || "anonymous";
+
+    return modelJSON;
+}
+
 function doReview(e) {
-    Alloy.createController("modal/reviewEdit", { "$model" : transformReview() }).getView().open();
+    Alloy.createController("modal/reviewEdit", { "$model" : getReview() }).getView().open();
 }
 
 function doTabClick(e) {
@@ -36,10 +46,10 @@ function doTabClick(e) {
 }
 
 function doItemClick(e) {
-    Alloy.createController("modal/reviewEdit", { "$model" : transformReview(e.itemId) }).getView().open();
+    Alloy.createController("modal/reviewEdit", { "$model" : getReview(e.itemId) }).getView().open();
 }
 
-function transformReview(id) {
+function getReview(id) {
     var review = id ? Alloy.Collections.reviews.get(id) : Alloy.Globals.parse.createModel("review");
 
     review.__transform = review.toJSON();
@@ -60,3 +70,12 @@ function transformReview(id) {
 
     return review;
 }
+
+$.cleanup = function () {
+    // let Alloy clean up listeners to global collections for data-binding
+    // always call it since it'll just be empty if there are none
+    $.destroy();
+
+    // remove all event listeners on the controller
+    $.off();
+};
