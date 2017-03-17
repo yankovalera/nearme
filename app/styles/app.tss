@@ -27,6 +27,10 @@ overrode the settings with other TSS, XML, or JS settings:
     borderRadius: 5
 }
 
+"TextField": {
+	color: "#444"
+}
+
 'TextField[platform=ios]': {
 	height: 40,
     paddingLeft: 10
