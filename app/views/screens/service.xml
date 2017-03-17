@@ -1,25 +1,54 @@
 <Alloy>
 	<Window class="container" title="{ title }">
-		<ScrollView class="verticalScroll">
-			<ScrollableView id="imagesScroll" dataCollection="images">
-				<ImageView image="{ url }" class="itemImage"/>
-			</ScrollableView>
+		<TabbedBar id="tabbedBar" onClick="doTabClick" index="0" module="TabbedBar">
+			<!-- The Labels tag sets the TabbedBar.labels property. -->
+			<Labels>
+				<!-- Specify text with node text or the title attribute. -->
+				<!-- Can also specify the enabled, image and width attributes. -->
+				<Label>Details</Label>
+				<Label>Reviews</Label>
+			</Labels>
+		</TabbedBar>
 
-			<View class="row" onClick="doOpenWeb">
-				<ImageView image="/images/link.png" class="icon" left="20"/>
+		<ScrollableView id="infoScrollable">
+			<ScrollView class="verticalScroll">
+				<ScrollableView id="imagesScroll" dataCollection="images">
+					<ImageView image="{ url }" class="itemImage"/>
+				</ScrollableView>
 
-				<Label text="{ website }" class="info" left="50"/>
-			</View>
+				<View class="row" onClick="doOpenWeb">
+					<ImageView image="/images/link.png" class="icon" left="20"/>
 
-			<View class="row" onClick="doCall">
-				<ImageView image="/images/call.png" class="icon" left="20"/>
+					<Label text="{ website }" class="info" left="50"/>
+				</View>
 
-				<Label text="{ phone }" class="info"/>
-			</View>
+				<View class="row" onClick="doCall">
+					<ImageView image="/images/call.png" class="icon" left="20"/>
 
-			<View class="separator"/>
+					<Label text="{ phone }" class="info"/>
+				</View>
 
-			<Label text="{ about }" class="description"/>
-		</ScrollView>
+				<View class="separator"/>
+
+				<Label text="{ about }" class="description"/>
+
+				<Button title="Review" onClick="doReview" class="reviewButton" />
+			</ScrollView>
+
+			<ListView id="reviewsList" defaultItemTemplate="defaultTemplate" onItemclick="doItemClick">
+				<Templates>
+					<ItemTemplate name="defaultTemplate">
+						<Label class="reviewLabel font12" bindId="review" />
+					</ItemTemplate>
+				</Templates>
+
+				<ListSection id="section" dataCollection="reviews">
+					<ListItem
+						review:text="{ review }"
+						itemId="{ objectId }">
+					</ListItem>
+				</ListSection>
+			</ListView>
+		</ScrollableView>
 	</Window>
 </Alloy>

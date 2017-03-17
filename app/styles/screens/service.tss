@@ -31,14 +31,41 @@
     right: 10
 }
 
-".separator": {
-    width: Ti.UI.FILL,
-    height: 1,
-    backgroundColor: "#DDD"
-}
-
 ".row": {
     height: 40,
     top: 0,
     backgroundColor: "#DDD"
+}
+
+"#infoScrollable": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    scrollingEnabled: false
+}
+
+".reviewsContainer": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
+}
+
+".reviewButton": {
+    width: "80%",
+    height: Ti.UI.SIZE,
+    top: 30,
+    bottom: 30
+}
+
+"#reviewsList": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
+}
+
+".reviewLabel": {
+    width: "90%",
+    height: 60,
+    top: 10,
+}
+
+"ListItem": {
+    height: 80
 }

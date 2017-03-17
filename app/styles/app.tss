@@ -36,6 +36,55 @@ overrode the settings with other TSS, XML, or JS settings:
 	height: Ti.UI.SIZE
 }
 
+
+"TabbedBar": {
+    width: "80%",
+    height: 30,
+    top: 10,
+    bottom: 10,
+    borderRadius: 0
+}
+
+"TabbedBar[platform=android]": {
+    font: {
+        fontSize: 10
+    },
+    barBorderWidth: 1,
+    selectedColor: "#FFF"
+}
+
+".separator": {
+    width: Ti.UI.FILL,
+    height: 1,
+    backgroundColor: "#DDD"
+}
+
+
+".horizontalSeparator": {
+	width: 1,
+    height: 50,
+    backgroundColor: "#DDD"
+}
+
+".modalWindow" : {
+    backgroundColor: "#B3000000"
+}
+
+".modalContent" : {
+    width: "90%",
+    height: Ti.UI.SIZE,
+    backgroundColor: "white",
+	layout: "vertical"
+}
+
+".modalAction" : {
+    width: "50%",
+	height: 50,
+    backgroundColor: "white",
+    color: "#444",
+	borderWidth: 0
+}
+
 ".formInput": {
     width: "90%",
     top: 20,

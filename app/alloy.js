@@ -40,6 +40,16 @@ Alloy.Globals.parse.config({
         collections: [{
             name: "images"
         }]
+    }, {
+        name: "review",
+        id: "objectId",
+        create: "createReview",
+        update: "updateReview",
+        collections: [{
+            name: "reviews",
+            content: "results",
+            read: "getReviews"
+        }]
     }],
     methods: [{
         name: "login",
@@ -53,6 +63,15 @@ Alloy.Globals.parse.config({
     }, {
         name: "getServices",
         post: "functions/nearme"
+    }, {
+        name: "createReview",
+        post: "classes/Review"
+    }, {
+        name: "updateReview",
+        put: "classes/Review/<objectId>"
+    }, {
+        name: "getReviews",
+        get: 'classes/Review?where={"service":{"__type":"Pointer", "className":"Service", "objectId":"<serviceId>"}}&include=user'
     }],
     onLoad: function(e, callback) {
         if (callback) {
@@ -61,7 +80,9 @@ Alloy.Globals.parse.config({
     }
 });
 
-Alloy.Globals.goHome = function (user) {
+Alloy.Globals.goHome = function(user) {
+    console.log(user);
+
     Alloy.Globals.user = user;
 
     Ti.App.Properties.setObject("user", user);

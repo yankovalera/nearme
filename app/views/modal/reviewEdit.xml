@@ -1,0 +1,17 @@
+<Alloy>
+	<Window class="modalWindow" onClose="$.cleanup">
+        <View class="modalContent vertical">
+        	<TextArea id="review" value="{ review }" module="xp.ui" hintText="Add your review"/>
+
+            <View class="separator" />
+
+            <View class="row">
+                <Button title="CANCEL" class="modalAction" left="0" onClick="doCancel" />
+
+                <View class="horizontalSeparator" />
+
+                <Button title="OK" class="modalAction" right="0" onClick="doAccept" />
+            </View>
+        </View>
+    </Window>
+</Alloy>

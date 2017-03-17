@@ -2,4 +2,5 @@
 <resources>
 	<string name="forgot_label">Recover password</string>
 	<string name="connection_error">Connection error</string>
+	<string name="no_reviews">There are no reviews yet.</string>
 </resources>
