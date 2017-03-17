@@ -81,8 +81,6 @@ Alloy.Globals.parse.config({
 });
 
 Alloy.Globals.goHome = function(user) {
-    console.log(user);
-
     Alloy.Globals.user = user;
 
     Ti.App.Properties.setObject("user", user);

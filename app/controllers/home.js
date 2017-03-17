@@ -60,8 +60,6 @@ function fetchRemoteData(data) {
             Alloy.Globals.loading.hide();
         },
         error: function(e) {
-            console.log(e);
-
             Alloy.Globals.loading.hide();
         }
     });

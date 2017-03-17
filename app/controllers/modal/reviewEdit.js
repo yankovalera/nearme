@@ -3,8 +3,6 @@ var args = $.args;
 
 var editing = $model.id ? true : false;
 
-console.log("edit" + editing);
-
 function doAccept(e) {
     var review = $.review.getValue();
 

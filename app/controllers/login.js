@@ -23,7 +23,6 @@ function doLogin(e) {
             email: email.trim().toLowerCase(),
             password: password
         }, function(e) {
-            console.log(e);
             Alloy.Globals.loading.hide();
 
             if (e && e.objectId) {

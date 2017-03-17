@@ -14,8 +14,6 @@ function doRecover(e) {
                 email: email.trim().toLowerCase()
             }
         }, function (e) {
-            console.log(e);
-
             Alloy.Globals.loading.hide();
 
             if (_.isEmpty(e)) {
